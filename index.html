@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AIMC Blood Donation Society - Save Lives, Share Hope</title>
+    <meta name="description" content="Allama Iqbal Medical College Blood Donation Society. Join our mission to save lives. Register as a donor or request blood easily.">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Glassmorphic Navbar -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#" class="nav-logo">
+                <img src="logo.jpeg" alt="AIMC BDS Logo" class="nav-logo-img">
+                <span class="logo-text">AIMC <span class="highlight">BDS</span></span>
+            </a>
+            <button class="mobile-toggle" id="mobile-toggle" aria-label="Toggle Navigation">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="#" class="nav-link active">Home</a></li>
+                <li><a href="#about" class="nav-link">Our Team</a></li>
+                <li><a href="#impact" class="nav-link">Our Impact</a></li>
+                <li><a href="#services" class="nav-link">Services</a></li>
+                <li><a href="#register" class="btn btn-nav">Register Now</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Immersive Hero Section -->
+    <section class="hero-section" id="hero">
+        <div class="hero-bg">
+            <img src="https://images.unsplash.com/photo-1615461066841-6116e61058f4?auto=format&fit=crop&w=1920&q=85" alt="Hero background" class="hero-bg-img" loading="eager">
+        </div>
+        <div class="hero-bg-overlay"></div>
+        <!-- Particle canvas or animated bg -->
+        <div class="hero-shapes">
+            <div class="shape shape-1"></div>
+            <div class="shape shape-2"></div>
+        </div>
+        
+        <div class="hero-container">
+            <div class="hero-content">
+                <span class="hero-tagline"><i class="fa-solid fa-droplet icon-pulse"></i> AIMC BLOOD DONATION SOCIETY</span>
+                <h1 class="hero-title">Donate Blood,<br><span class="gradient-text">Save A Life.</span></h1>
+                <p class="hero-description">
+                    Every drop of blood you donate is a breath of life for someone in need. Join Allama Iqbal Medical College's premier life-saving network today.
+                </p>
+                <div class="hero-actions">
+                    <a href="#register" class="btn btn-primary">Become a Donor <i class="fa-solid fa-arrow-right"></i></a>
+                    <a href="#request-blood" class="btn btn-secondary">Request Blood <i class="fa-solid fa-droplet"></i></a>
+                </div>
+            </div>
+            
+            <div class="hero-card-wrapper">
+                <div class="glass-card hero-info-card">
+                    <div class="urgent-tag"><span class="pulse-dot"></span> URGENT REQUIREMENT</div>
+                    <div class="blood-types-grid">
+                        <div class="blood-type-badge urgent">O- <span class="req">Need 4 units</span></div>
+                        <div class="blood-type-badge urgent">A+ <span class="req">Need 2 units</span></div>
+                        <div class="blood-type-badge">B- <span class="req">Need 1 unit</span></div>
+                        <div class="blood-type-badge">AB- <span class="req">Need 2 units</span></div>
+                    </div>
+                    <a href="#request-blood" class="card-action-link">View All Live Requests <i class="fa-solid fa-chevron-right"></i></a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="scroll-indicator">
+            <a href="#about"><i class="fa-solid fa-arrow-down-long"></i></a>
+        </div>
+    </section>
+
+    <!-- Our Team Section -->
+    <section class="team-section scroll-reveal" id="about">
+        <div class="container">
+            <div class="section-header">
+                <span class="sub-title">MEET THE LEADERS</span>
+                <h2 class="section-title">Our Team & Patron</h2>
+                <div class="header-line"></div>
+            </div>
+            
+            <div class="team-grid">
+                <!-- Patron Card -->
+                <div class="team-card glass-card patron-card">
+                    <div class="team-img-wrapper">
+                        <img src="prof dr shabnam bashir -  Professor hematology AIMC & JHL.png" alt="Prof Dr Shabnam Bashir" class="team-img">
+                        <div class="team-img-overlay"></div>
+                    </div>
+                    <div class="team-info">
+                        <h3>Prof. Dr. Shabnam Bashir</h3>
+                        <span class="team-role">Patron & Professor of Hematology AIMC & JHL</span>
+                        <p>Leading our society with profound expertise, Prof. Dr. Shabnam ensures clinical excellence, safety, and unwavering support from AIMC and Jinnah Hospital Lahore.</p>
+                    </div>
+                </div>
+                
+                <!-- Exec Team Card -->
+                <div class="team-card glass-card society-card">
+                    <div class="team-img-wrapper">
+                        <img src="our team.jpeg" alt="AIMC BDS Team" class="team-img">
+                        <div class="team-img-overlay"></div>
+                    </div>
+                    <div class="team-info">
+                        <h3>The Society Executive Team</h3>
+                        <span class="team-role">Student Doctors & Volunteers</span>
+                        <p>A dynamic group of medical students dedicated to dismantling myths around blood donation, coordinating 24/7 rapid emergency mobilizations, and saving lives.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Impact & Mission Banner (Solid Accent Color with modern image layout) -->
+    <section class="impact-section" id="impact">
+        <div class="container impact-container">
+            <div class="impact-content">
+                <span class="sub-title white-text">HAYATA SARIL DERNEĞİ INSPIRATION</span>
+                <h2 class="section-title white-text">Our Life Saving Impact</h2>
+                <p class="impact-description">
+                    The AIMC Blood Donation Society is the university's peak organization for blood procurement and donation support. Founded on the ideals of humanity and student solidarity, we bridge the gap between donors and patients within seconds.
+                </p>
+                <div class="stats-row">
+                    <div class="stat-item">
+                        <span class="stat-num" id="stat-donors">1,240+</span>
+                        <span class="stat-label">Active Donors</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-num" id="stat-lives">3,890+</span>
+                        <span class="stat-label">Lives Saved</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-num" id="stat-drives">45+</span>
+                        <span class="stat-label">Donation Drives</span>
+                    </div>
+                </div>
+                <a href="#about" class="btn btn-light">Read Our History <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+            <div class="impact-visual">
+                <div class="visual-stack">
+                    <div class="visual-card main-img-card">
+                        <!-- Modern geometric design / UI preview -->
+                        <div class="donation-graph-ui">
+                            <div class="ui-header">
+                                <span>Weekly Donations</span>
+                                <span class="percentage-up"><i class="fa-solid fa-arrow-trend-up"></i> +14%</span>
+                            </div>
+                            <div class="graph-bars">
+                                <div class="bar" style="--h: 40%"><span>M</span></div>
+                                <div class="bar" style="--h: 60%"><span>T</span></div>
+                                <div class="bar" style="--h: 85%"><span>W</span></div>
+                                <div class="bar active" style="--h: 95%"><span>T</span></div>
+                                <div class="bar" style="--h: 50%"><span>F</span></div>
+                                <div class="bar" style="--h: 70%"><span>S</span></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="visual-card accent-info-card glass-card">
+                        <div class="card-icon-round"><i class="fa-solid fa-award"></i></div>
+                        <h4>Top Donor Society 2025</h4>
+                        <p>Awarded by Lahore Health Authorities for outstanding emergency support.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Features Section (Unsplash Background) -->
+    <section class="services-section" id="services">
+        <div class="services-bg">
+            <img src="https://images.unsplash.com/photo-1615461066841-6116e61058f4?auto=format&fit=crop&w=1920&q=85" alt="Blood donation background" class="services-bg-img" loading="lazy">
+            <div class="services-bg-overlay"></div>
+        </div>
+        <div class="container">
+            <div class="section-header">
+                <span class="sub-title">CORE SERVICES</span>
+                <h2 class="section-title">What We Facilitate</h2>
+                <div class="header-line"></div>
+            </div>
+
+            <div class="services-grid">
+                <div class="service-box">
+                    <div class="service-icon"><i class="fa-solid fa-id-card"></i></div>
+                    <h3>Donor Directory</h3>
+                    <p>Search qualified student donors by blood group, department, or hostel location instantly in urgent times.</p>
+                    <a href="#register" class="service-link">Access Directory <i class="fa-solid fa-arrow-right-long"></i></a>
+                </div>
+                <div class="service-box">
+                    <div class="service-icon"><i class="fa-solid fa-kit-medical"></i></div>
+                    <h3>Eligibility Screening</h3>
+                    <p>Find out if you can donate blood in less than 2 minutes using our automated visual eligibility checklist.</p>
+                    <a href="#" class="service-link" id="check-eligibility-btn">Check Eligibility <i class="fa-solid fa-arrow-right-long"></i></a>
+                </div>
+                <div class="service-box">
+                    <div class="service-icon"><i class="fa-solid fa-truck-medical"></i></div>
+                    <h3>Mobile Camps</h3>
+                    <p>Track live locations of our blood collection buses stationed across campus and Lahore districts.</p>
+                    <a href="#" class="service-link">View Camp Map <i class="fa-solid fa-arrow-right-long"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Donation & Request Center -->
+    <section class="action-center-section" id="register">
+        <div class="container">
+            <div class="action-wrapper">
+                
+                <!-- Donor Registration Form (AIMC Image Background) -->
+                <div class="action-card glass-card scroll-reveal aimc-card">
+                    <!-- Slowly Zooming AIMC Campus Image -->
+                    <div class="aimc-bg">
+                        <img src="aimc pic.jpeg" alt="Allama Iqbal Medical College" class="aimc-bg-img">
+                        <div class="aimc-bg-dark"></div>
+                    </div>
+                    <div class="card-badge">JOIN THE MOVEMENT</div>
+                    <h3>Register as a Volunteer Donor</h3>
+                    <p>Become the lifeline for hundreds of emergency patients. Keep your details updated, so we can reach you when it matters most.</p>
+                    
+                    <form id="donor-registration-form" class="interactive-form">
+                        <div class="form-group">
+                            <label for="reg-name">Full Name</label>
+                            <div class="input-wrapper">
+                                <i class="fa-regular fa-user"></i>
+                                <input type="text" id="reg-name" required placeholder="e.g. Your Name">
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="reg-blood">Blood Group</label>
+                                <div class="input-wrapper">
+                                    <i class="fa-solid fa-droplet"></i>
+                                    <select id="reg-blood" required>
+                                        <option value="" disabled selected>Select</option>
+                                        <option value="A+">A+</option>
+                                        <option value="A-">A-</option>
+                                        <option value="B+">B+</option>
+                                        <option value="B-">B-</option>
+                                        <option value="AB+">AB+</option>
+                                        <option value="AB-">AB-</option>
+                                        <option value="O+">O+</option>
+                                        <option value="O-">O-</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="reg-phone">Phone Number</label>
+                                <div class="input-wrapper">
+                                    <i class="fa-solid fa-phone"></i>
+                                    <input type="tel" id="reg-phone" required placeholder="e.g. +92 3XX XXXXXXX">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="reg-year">Academic Batch / Roll No</label>
+                            <div class="input-wrapper">
+                                <i class="fa-solid fa-graduation-cap"></i>
+                                <input type="text" id="reg-year" required placeholder="e.g. 4th Year MBBS, Roll 120">
+                            </div>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-block">Submit Registration <i class="fa-solid fa-paper-plane"></i></button>
+                    </form>
+                </div>
+
+                <!-- Urgent Blood Request Area -->
+                <div class="action-card glass-card dark-glass scroll-reveal" id="request-blood">
+                    <div class="card-badge urgent-badge">EMERGENCY DISPATCH</div>
+                    <h3>Need Blood Urgently?</h3>
+                    <p>Submit an emergency broadcast. We immediately notify verified donors matching the requested blood group in real-time.</p>
+                    
+                    <form id="blood-request-form" class="interactive-form">
+                        <div class="form-group">
+                            <label for="req-patient">Patient Name / Case Description</label>
+                            <div class="input-wrapper">
+                                <i class="fa-solid fa-hospital-user"></i>
+                                <input type="text" id="req-patient" required placeholder="e.g. Emergency Surgery, Jinnah Hospital">
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="req-blood-group">Required Blood Group</label>
+                                <div class="input-wrapper">
+                                    <i class="fa-solid fa-droplet"></i>
+                                    <select id="req-blood-group" required>
+                                        <option value="" disabled selected>Select</option>
+                                        <option value="A+">A+</option>
+                                        <option value="A-">A-</option>
+                                        <option value="B+">B+</option>
+                                        <option value="B-">B-</option>
+                                        <option value="AB+">AB+</option>
+                                        <option value="AB-">AB-</option>
+                                        <option value="O+">O+</option>
+                                        <option value="O-">O-</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="req-units">Units Needed</label>
+                                <div class="input-wrapper">
+                                    <i class="fa-solid fa-boxes-stacked"></i>
+                                    <input type="number" id="req-units" min="1" max="10" required placeholder="Units">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="req-contact">Contact Number for Hospital Coord</label>
+                            <div class="input-wrapper">
+                                <i class="fa-solid fa-phone-volume"></i>
+                                <input type="tel" id="req-contact" required placeholder="e.g. +92 3XX XXXXXXX">
+                            </div>
+                        </div>
+                        <button type="submit" class="btn btn-accent btn-block">Broadcast Live Request <i class="fa-solid fa-tower-broadcast"></i></button>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Eligibility Quiz Modal -->
+    <div class="modal-overlay" id="quiz-modal">
+        <div class="modal-card glass-card">
+            <button class="modal-close" id="modal-close-btn"><i class="fa-solid fa-xmark"></i></button>
+            <div class="modal-header">
+                <i class="fa-solid fa-clipboard-question modal-icon"></i>
+                <h3>Eligibility Screening Test</h3>
+                <p>Ensure you satisfy the primary criteria before checking in.</p>
+            </div>
+            <div class="modal-body">
+                <div class="quiz-step active" data-step="1">
+                    <h4>1. Age & Weight Check</h4>
+                    <p>Are you between 18-60 years old and do you weigh at least 50 kg (110 lbs)?</p>
+                    <div class="quiz-choices">
+                        <button class="quiz-btn yes" data-next="2">Yes, I meet this</button>
+                        <button class="quiz-btn no">No</button>
+                    </div>
+                </div>
+                <div class="quiz-step" data-step="2">
+                    <h4>2. Health Status</h4>
+                    <p>Are you feeling completely well today and did you sleep at least 6 hours last night?</p>
+                    <div class="quiz-choices">
+                        <button class="quiz-btn yes" data-next="3">Yes, fully rested</button>
+                        <button class="quiz-btn no">No, feeling weak</button>
+                    </div>
+                </div>
+                <div class="quiz-step" data-step="3">
+                    <h4>3. Donation Interval</h4>
+                    <p>Has it been more than 3 months (90 days) since your last whole blood donation?</p>
+                    <div class="quiz-choices">
+                        <button class="quiz-btn yes" data-next="success">Yes / Never Donated</button>
+                        <button class="quiz-btn no">No, recently donated</button>
+                    </div>
+                </div>
+                <div class="quiz-step result-step success" id="quiz-success">
+                    <i class="fa-solid fa-circle-check result-icon"></i>
+                    <h4>Congratulations! You are Eligible!</h4>
+                    <p>You are fit to save lives today. Complete the registration form and stand by for emergency alerts.</p>
+                    <button class="btn btn-primary" id="quiz-register-btn">Proceed to Register</button>
+                </div>
+                <div class="quiz-step result-step fail" id="quiz-fail">
+                    <i class="fa-solid fa-circle-xmark result-icon"></i>
+                    <h4>Not Eligible Today</h4>
+                    <p>Thank you for your noble intention. However, for your safety and the health of the recipient, we recommend waiting or getting medical clearance before donating.</p>
+                    <button class="btn btn-secondary" id="quiz-close-btn">Close Quiz</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Notification Toast -->
+    <div id="toast" class="toast">
+        <div class="toast-content">
+            <i class="fa-solid fa-circle-info toast-icon"></i>
+            <span class="toast-message" id="toast-message">Task updated successfully!</span>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container footer-container">
+            <div class="footer-brand">
+                <a href="#" class="nav-logo">
+                    <span class="logo-icon"><i class="fa-solid fa-heart-pulse"></i></span>
+                    <span class="logo-text">AIMC <span class="highlight">BDS</span></span>
+                </a>
+                <p>Connecting heroic students of Allama Iqbal Medical College to patients in distress since 2012.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                </div>
+            </div>
+            
+            <div class="footer-links">
+                <h4>Quick Navigation</h4>
+                <ul>
+                    <li><a href="#hero">Home</a></li>
+                    <li><a href="#about">Biz Kimiz?</a></li>
+                    <li><a href="#impact">Our Impact</a></li>
+                    <li><a href="#services">Services Offered</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-contact">
+                <h4>Emergency Contact</h4>
+                <p><i class="fa-solid fa-location-dot"></i> BDS Office, Student Center, Allama Iqbal Medical College, Lahore, Pakistan</p>
+                <p><i class="fa-solid fa-phone"></i> BDS Helpline: +92 42 99231443</p>
+                <p><i class="fa-solid fa-envelope"></i> support@aimcbds.org</p>
+            </div>
+        </div>
+        <div class="footer-bottom" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; padding: 2rem;">
+            <p>&copy; 2026 AIMC Blood Donation Society. Engineered with ❤️ by Antigravity AI.</p>
+            <a href="admin.html" style="color: rgba(255,255,255,0.5); font-size: 0.85rem; text-decoration: none; display: flex; align-items: center; gap: 0.5rem; transition: color 0.3s;"><i class="fa-solid fa-shield-halved"></i> Staff Portal</a>
+        </div>
+    </footer>
+
+    <!-- Supabase JS Client & Local Config -->
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="config.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

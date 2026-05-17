@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BDS Staff Dashboard - AIMC Blood Donation Society</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="admin.css">
+</head>
+<body class="admin-body">
+
+    <!-- Staff Dashboard — Direct Access (no login required) -->
+    <div id="dashboard-container" class="dashboard-wrapper">
+        
+        <!-- Sidebar Navigation -->
+        <aside class="sidebar">
+            <div class="sidebar-brand">
+                <i class="fa-solid fa-heart-pulse"></i>
+                <span>BDS Staff</span>
+            </div>
+            <ul class="sidebar-menu">
+                <li class="active" data-tab="overview"><i class="fa-solid fa-chart-line"></i> Overview</li>
+                <li data-tab="donors"><i class="fa-solid fa-users"></i> Donors Network</li>
+                <li data-tab="requests"><i class="fa-solid fa-tower-broadcast"></i> Emergencies</li>
+                <li data-tab="urgent-settings"><i class="fa-solid fa-sliders"></i> Urgent Board</li>
+            </ul>
+            <div class="sidebar-footer">
+                <div class="user-info">
+                    <i class="fa-solid fa-circle-user"></i>
+                    <span id="user-email">staff@aimc.edu</span>
+                </div>
+                <button id="logout-btn" class="btn-logout"><i class="fa-solid fa-power-off"></i> Log Out</button>
+            </div>
+        </aside>
+
+        <!-- Main Dashboard Panel -->
+        <main class="main-content">
+            <header class="dashboard-header">
+                <div class="header-title">
+                    <h1>Staff Management Panel</h1>
+                    <p id="current-date">System Live Status</p>
+                </div>
+                <div class="header-actions">
+                    <button class="btn btn-secondary btn-sm" id="refresh-all-btn"><i class="fa-solid fa-arrows-rotate"></i> Refresh Sync</button>
+                </div>
+            </header>
+
+            <!-- Tab Content: Overview -->
+            <section class="tab-content active" id="tab-overview">
+                <!-- Stats Banner -->
+                <div class="admin-stats-grid">
+                    <div class="admin-stat-card glass-card">
+                        <div class="stat-icon-wrapper"><i class="fa-solid fa-users"></i></div>
+                        <div class="stat-info">
+                            <span class="stat-label">Volunteer Donors</span>
+                            <h3 id="stat-donors-count">0</h3>
+                        </div>
+                    </div>
+                    <div class="admin-stat-card glass-card">
+                        <div class="stat-icon-wrapper urgent"><i class="fa-solid fa-droplet"></i></div>
+                        <div class="stat-info">
+                            <span class="stat-label">Pending Requests</span>
+                            <h3 id="stat-pending-count">0</h3>
+                        </div>
+                    </div>
+                    <div class="admin-stat-card glass-card">
+                        <div class="stat-icon-wrapper fulfilled"><i class="fa-solid fa-circle-check"></i></div>
+                        <div class="stat-info">
+                            <span class="stat-label">Dispatched Success</span>
+                            <h3 id="stat-fulfilled-count">0</h3>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Two Column Live Feed -->
+                <div class="overview-grid">
+                    <!-- Urgent Requirements Board Manager -->
+                    <div class="glass-card grid-box shadow-box">
+                        <div class="box-header">
+                            <h3><i class="fa-solid fa-sliders accent-text"></i> Live Urgent Requirement Board</h3>
+                            <span class="box-desc">Controls the hero card real-time values</span>
+                        </div>
+                        <div class="urgent-board-manager">
+                            <form id="add-urgent-form" class="inline-form">
+                                <select id="new-urgent-blood" required>
+                                    <option value="" disabled selected>Blood Group</option>
+                                    <option value="A+">A+</option>
+                                    <option value="A-">A-</option>
+                                    <option value="B+">B+</option>
+                                    <option value="B-">B-</option>
+                                    <option value="AB+">AB+</option>
+                                    <option value="AB-">AB-</option>
+                                    <option value="O+">O+</option>
+                                    <option value="O-">O-</option>
+                                </select>
+                                <input type="number" id="new-urgent-units" min="1" max="100" placeholder="Units Needed" required>
+                                <button type="submit" class="btn btn-primary"><i class="fa-solid fa-plus"></i> Add Group</button>
+                            </form>
+                            <div class="table-container compact">
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th>Blood Group</th>
+                                            <th>Units Needed</th>
+                                            <th>Urgent Flag</th>
+                                            <th>Actions</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="urgent-board-tbody">
+                                        <!-- Rendered dynamically -->
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Recent Urgent Requests Activity -->
+                    <div class="glass-card grid-box shadow-box">
+                        <div class="box-header">
+                            <h3><i class="fa-solid fa-tower-broadcast text-primary"></i> Live Emergency Broadcasts</h3>
+                            <span class="box-desc">Latest blood requests submitted</span>
+                        </div>
+                        <div class="recent-requests-list" id="recent-requests-container">
+                            <!-- Rendered dynamically -->
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Tab Content: Donors -->
+            <section class="tab-content hidden" id="tab-donors">
+                <div class="glass-card filter-card">
+                    <div class="filter-header">
+                        <h3><i class="fa-solid fa-filter"></i> Search & Filter Network</h3>
+                    </div>
+                    <div class="filter-controls">
+                        <input type="text" id="donor-search-input" placeholder="Search by name, roll no, phone...">
+                        <select id="donor-blood-filter">
+                            <option value="">All Blood Groups</option>
+                            <option value="A+">A+</option>
+                            <option value="A-">A-</option>
+                            <option value="B+">B+</option>
+                            <option value="B-">B-</option>
+                            <option value="AB+">AB+</option>
+                            <option value="AB-">AB-</option>
+                            <option value="O+">O+</option>
+                            <option value="O-">O-</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="glass-card shadow-box">
+                    <div class="table-container">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Registered Date</th>
+                                    <th>Full Name</th>
+                                    <th>Blood Group</th>
+                                    <th>Contact Number</th>
+                                    <th>Batch / Roll No</th>
+                                </tr>
+                            </thead>
+                            <tbody id="donors-table-tbody">
+                                <!-- Dynamic rows -->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Tab Content: Emergency Dispatch -->
+            <section class="tab-content hidden" id="tab-requests">
+                <div class="glass-card shadow-box">
+                    <div class="box-header">
+                        <h3>Full Case History & Dispatch Desk</h3>
+                        <span class="box-desc">Update patient cases or trigger fullfills</span>
+                    </div>
+                    <div class="table-container">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Broadcast Date</th>
+                                    <th>Patient / Hospital Case</th>
+                                    <th>Blood Group</th>
+                                    <th>Required Units</th>
+                                    <th>Contact Number</th>
+                                    <th>Status</th>
+                                    <th>Update Action</th>
+                                </tr>
+                            </thead>
+                            <tbody id="requests-table-tbody">
+                                <!-- Dynamic rows -->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Tab Content: Urgent board setting tab (dedicated view) -->
+            <section class="tab-content hidden" id="tab-urgent-settings">
+                <div class="glass-card shadow-box">
+                    <div class="box-header">
+                        <h3>Urgent Requirement Master Control</h3>
+                        <p>Direct live modifications of the cards shown in the immersive hero section header.</p>
+                    </div>
+                    <div class="urgent-control-panel-large">
+                        <div class="urgent-input-grid" id="urgent-large-grid">
+                            <!-- Large interactive block inputs for each blood type -->
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <!-- Notification Toast -->
+    <div id="toast" class="toast">
+        <div class="toast-content">
+            <i class="fa-solid fa-circle-info toast-icon"></i>
+            <span class="toast-message" id="admin-toast-message">Syncing data...</span>
+        </div>
+    </div>
+
+    <!-- Supabase SDK, configurations & application logic -->
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="config.js"></script>
+    <script src="admin.js"></script>
+</body>
+</html>
