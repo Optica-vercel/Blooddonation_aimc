@@ -34,9 +34,9 @@ const initApp = () => {
 
     // 3. Stats Counter Animation
     const stats = [
-        { id: 'stat-donors', target: 1240, suffix: '+' },
-        { id: 'stat-lives', target: 3890, suffix: '+' },
-        { id: 'stat-drives', target: 45, suffix: '+' }
+        { id: 'stat-donors', target: 900, suffix: '+' },
+        { id: 'stat-lives', target: 95, suffix: '+' },
+        { id: 'stat-drives', target: 1, suffix: '+', pad: true }
     ];
 
     const animateStats = (entries, observer) => {
@@ -52,10 +52,15 @@ const initApp = () => {
                     
                     const updateCounter = () => {
                         current += increment;
-                        if (current >= stat.target) {
-                            el.textContent = Math.round(stat.target).toLocaleString() + stat.suffix;
-                        } else {
-                            el.textContent = Math.round(current).toLocaleString() + stat.suffix;
+                        let rounded = Math.round(current >= stat.target ? stat.target : current);
+                        let formatted = rounded.toLocaleString();
+                        if (stat.pad && rounded < 10) {
+                            formatted = '0' + formatted;
+                        }
+                        
+                        el.textContent = formatted + stat.suffix;
+                        
+                        if (current < stat.target) {
                             requestAnimationFrame(updateCounter);
                         }
                     };
