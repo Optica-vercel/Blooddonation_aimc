@@ -375,20 +375,22 @@ h1, h2, h3, h4 {
 .hero-tagline {
     display: inline-flex;
     align-items: center;
-    gap: 0.6rem;
-    background: rgba(255, 255, 255, 0.1);
+    gap: 0.8rem;
+    background: rgba(255, 255, 255, 0.12);
     border: var(--glass-border);
-    padding: 0.5rem 1.2rem;
+    padding: 0.75rem 1.6rem;
     border-radius: 30px;
-    font-size: 0.8rem;
+    font-size: 1rem;
     font-weight: 700;
     letter-spacing: 1px;
     margin-bottom: 2rem;
     backdrop-filter: blur(5px);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.15);
 }
 
 .hero-tagline .icon-pulse {
     color: #F87171;
+    font-size: 1.15rem;
     animation: beat 1.2s infinite;
 }
 
@@ -2178,7 +2180,9 @@ footer {
     }
 
     .hero-tagline {
-        font-size: 0.7rem;
+        font-size: 0.85rem;
+        padding: 0.6rem 1.2rem;
+        gap: 0.6rem;
     }
 
     .section-title {
