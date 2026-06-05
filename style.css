@@ -796,7 +796,7 @@ h1, h2, h3, h4 {
     -webkit-backdrop-filter: blur(20px);
     border: var(--glass-border);
     padding: 2.5rem;
-    width: 85%;
+    width: 100%;
     height: 330px;
     top: 0;
     left: 0;
@@ -857,41 +857,7 @@ h1, h2, h3, h4 {
     opacity: 0.7;
 }
 
-.accent-info-card {
-    background: var(--accent);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    color: var(--text-light);
-    padding: 2rem;
-    width: 60%;
-    bottom: -10%;
-    right: 0;
-    z-index: 2;
-    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.25);
-}
 
-.card-icon-round {
-    width: 45px;
-    height: 45px;
-    border-radius: 50%;
-    background: rgba(216, 90, 63, 0.15);
-    color: var(--primary-light);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1.25rem;
-    margin-bottom: 1.2rem;
-}
-
-.accent-info-card h4 {
-    font-size: 1.1rem;
-    margin-bottom: 0.5rem;
-}
-
-.accent-info-card p {
-    font-size: 0.85rem;
-    opacity: 0.8;
-    line-height: 1.4;
-}
 
 /* Services / Features Section */
 .services-section {
@@ -2032,12 +1998,15 @@ footer {
         right: -100%;
         width: 75%;
         height: 100vh;
-        background: var(--accent);
+        background: rgba(15, 23, 42, 0.95);
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+        border-left: 1px solid rgba(255, 255, 255, 0.1);
         flex-direction: column;
         justify-content: center;
         gap: 2.5rem;
         transition: var(--transition-smooth);
-        box-shadow: -10px 0 30px rgba(0,0,0,0.15);
+        box-shadow: -15px 0 40px rgba(0, 0, 0, 0.3);
         padding: 3rem;
     }
     
@@ -2105,6 +2074,15 @@ footer {
     .stats-row {
         flex-direction: column;
         gap: 2rem;
+        align-items: center;
+    }
+
+    .team-img-wrapper {
+        height: 280px;
+    }
+
+    .modal-card {
+        padding: 2.5rem 1.8rem;
     }
 
     /* Contact section mobile */
@@ -2185,12 +2163,41 @@ footer {
         gap: 0.6rem;
     }
 
+    .hero-social-item {
+        padding: 0.9rem;
+        gap: 0.4rem;
+        border-radius: 12px;
+    }
+
+    .social-icon-box {
+        width: 38px;
+        height: 38px;
+        font-size: 1.1rem;
+    }
+
+    .social-name {
+        font-size: 0.72rem;
+    }
+
     .section-title {
         font-size: 1.5rem;
     }
 
     .stat-num {
         font-size: 2rem;
+    }
+
+    .visual-stack {
+        height: 300px;
+    }
+
+    .main-img-card {
+        padding: 1.5rem;
+        height: 280px;
+    }
+
+    .graph-bars {
+        height: 120px;
     }
 
     .contact-content {
@@ -2209,5 +2216,19 @@ footer {
     .nav-logo-img {
         width: 32px;
         height: 32px;
+    }
+
+    .modal-card {
+        padding: 2.2rem 1.5rem;
+    }
+
+    .quiz-choices {
+        flex-direction: column;
+        gap: 0.8rem;
+    }
+
+    .quiz-btn {
+        width: 100%;
+        padding: 0.8rem 1.5rem;
     }
 }
